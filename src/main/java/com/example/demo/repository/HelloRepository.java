@@ -9,7 +9,8 @@ import java.util.Optional;
 import com.example.demo.domain.Member;
 
 public class HelloRepository implements SpringHelloRepository  {
-
+	
+	//동시성 고려 안됨
 	private static Map<Long, Member> store = new HashMap<>();
 	private static long sequence = 0L;
 	
@@ -34,6 +35,10 @@ public class HelloRepository implements SpringHelloRepository  {
 	@Override
 	public List<Member> findAll() {
 		return new ArrayList<>(store.values());
+	}
+	
+	public void clearStore() {
+		store.clear();
 	}
 	
 }

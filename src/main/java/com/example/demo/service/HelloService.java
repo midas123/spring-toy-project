@@ -1,11 +1,11 @@
 package com.example.demo.service;
 
-import com.example.demo.repository.HelloRepository;
+import com.example.demo.repository.SpringHelloRepository;
 
 public class HelloService {
-	private final HelloRepository helloRepository;
+	private final SpringHelloRepository helloRepository;
 	
-	public HelloService(HelloRepository helloRepository) {
+	public HelloService(SpringHelloRepository helloRepository) {
 		this.helloRepository = helloRepository;
 	}
 }

@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.example.demo.service.HelloService;
 import com.example.demo.repository.HelloRepository;
+import com.example.demo.repository.SpringHelloRepository;
 
 @Configuration
 public class HelloSpringConfig {
@@ -15,7 +16,7 @@ public class HelloSpringConfig {
 	}
 	
 	@Bean 
-	public HelloRepository helloRepository() {
+	public SpringHelloRepository helloRepository() {
 		return new HelloRepository();
 	}
 }

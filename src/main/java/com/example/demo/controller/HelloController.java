@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.domain.Member;
 import com.example.demo.dto.ApiResponseMessage;
-import com.example.demo.dto.Person;
 import com.example.demo.service.HelloService;
 
 @RestController
@@ -31,7 +31,7 @@ public class HelloController {
 //	}
 	
 	
-	//생성자 주입, 어플리케이션 최초 구동시 의존주입이 발생하므로 이 방법을 권장함(런타임 중에 의존 주입X) 
+	//생성자 주입, 어플리케이션 최초 구동시 의존주입이 발생하므로 이 방법을 권장함(어떤 방식이든 런타임 중에 의존 주입X) 
 	private final HelloService helloService;
 	
 	@Autowired
@@ -64,7 +64,7 @@ public class HelloController {
 	}
 	
 	@PostMapping("/person/save")
-	public ResponseEntity<ApiResponseMessage> savePersonInfo(Person person){
+	public ResponseEntity<ApiResponseMessage> savePersonInfo(Member person){
 		return new ResponseEntity<>(new ApiResponseMessage("Code1", "성공"), HttpStatus.OK);
 	}
 }

@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.example.demo.service.HelloService;
-import com.example.demo.repository.HelloRepository;
+import com.example.demo.repository.MemberRepository;
 import com.example.demo.repository.SpringHelloRepository;
 
 @Configuration
@@ -17,6 +17,6 @@ public class HelloSpringConfig {
 	
 	@Bean 
 	public SpringHelloRepository helloRepository() {
-		return new HelloRepository();
+		return new MemberRepository();
 	}
 }

@@ -8,7 +8,7 @@ import java.util.Optional;
 
 import com.example.demo.domain.Member;
 
-public class HelloRepository implements SpringHelloRepository  {
+public class MemberRepository implements SpringHelloRepository  {
 	
 	//동시성 고려 안됨
 	private static Map<Long, Member> store = new HashMap<>();

@@ -11,7 +11,7 @@ import com.example.demo.domain.Member;
 
 public class HelloRepositoryTest {
 	
-	HelloRepository helloRepository = new HelloRepository();
+	MemberRepository helloRepository = new MemberRepository();
 	
 	@After
 	public void afterEach() { //테스트 간에 영향이 없도록 각 테스트 실행 후 저장 공간 클리어
